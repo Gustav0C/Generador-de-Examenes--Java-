@@ -71,8 +71,9 @@ public class MainController {
                 try (FileOutputStream outputWordStream = new FileOutputStream(outputWordPath)) {
                     document.write(outputWordStream);
                 }
+                // abrir y cerrar ventana de dialogo
+                JOptionPane.showMessageDialog(null, "Examen generado exitosamente: Examen_Tema_" + tema + ".docx");
 
-                System.out.println("Examen generado exitosamente: Examen_Tema_" + tema + ".docx");
             } catch (Exception e) {
                 e.printStackTrace();
                 System.out.println("Error al generar el examen: " + e.getMessage());
